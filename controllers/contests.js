@@ -55,7 +55,7 @@ function index(req, res) {
             },
             include: [
                 { model: User, attributes: ['name', 'id', 'username','email'] },
-                { model: Institution, /*as 'institution'*/}
+                { model: Institution, as: 'institution'}
             ]
         })
         .then((contest) => {

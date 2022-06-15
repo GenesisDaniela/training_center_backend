@@ -18,8 +18,8 @@ function getRanking(req, res) {
     if (!req.query.page)
         return res.status(400).send({ error: 'Datos incompletos' })
 
-    let limit = (req.query.limit) ? parseInt(req.query.limit) : 10
-    let offset = (req.query.page) ? limit * (parseInt(req.query.page) - 1) : 0
+    let limit = (req.query.limit) ? parseInt(req.query.limit) : 10;
+    let offset = (req.query.page) ? limit * (parseInt(req.query.page) - 1) : 0;
 
     let condition = {}
     let meta = {}
